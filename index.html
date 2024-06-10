@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>滑动侧边栏示例</title>
+    <style>body, html {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* 防止水平滚动 */
+    }
+    
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -100%; /* 初始状态隐藏 */
+        width: 150px; /* 侧边栏宽度 */
+        height: 100%;
+        background-color :white;
+        transition: transform 0.3s ease; /* 平滑动画 */
+        z-index: 1000; /* 确保侧边栏在遮罩层之上 */
+    }
+    
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 30%;
+        height: 100%;
+      background-color: rgb(21, 21, 21);
+        display: none; 
+        transition: opacity 0.3s ease; /* 平滑动画 */
+        z-index: 500;
+    }
+    
+    main {
+        margin-left: 0;
+        transition: margin-left 0.3s ease; /* 平滑动画 */
+    }
+    .top-text
+    {
+        color: white;
+        font-size: 10px;
+        
+    }
+    .touxiang{
+        position: relative;
+        top: 10px;
+    }
+    .saoma{
+        position: relative;
+        top: 10px;
+        padding-right: 0;
+        left: 40%;
+    }
+    .heijiao{
+        position: relative;
+        top: 10px;
+        left: 5px;
+    }
+    .zhongxing{
+        background-color: rgb(44, 44, 44);
+        width: 260px;
+        position: relative;
+        top: 15px;
+        border-radius: 15px;
+        left: 10px;
+        height: 200px;
+    }
+    .heijiao
+    {
+        position: relative;
+        bottom: 50px;
+    }
+    .xiaoxi{
+        position: relative;
+        /* left: 8px;
+        top: 10px; */
+        color: rgb(207,207, 207);
+        text-decoration: none;
+    }
+    .xiaoxitu
+    {
+        position: relative;
+        top: 2px;
+        border-radius: 5px;
+        left: 3px;
+    }
+    .fuhao{
+        position: relative;
+        left: 135px;
+    }
+    .fuhao1
+    {
+        position: relative;
+        left: 120px;
+    }
+</style>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+    <div id="overlay" class="overlay">c
+        <div class="top">
+            <span><a href="http://127.0.0.1:5500/%E5%A4%B4%E5%83%8F.html"><img src="头像.jpg" alt="" width="30px" class="touxiang"> </a></span>
+            <span class="top-text">当只猫也挺好&gt;</span>
+            <span><a href=""><img src="扫码.jpg" alt="" width="30px" class="saoma"></a></span>
+        </div>
+        <div class="heijiao" >
+            <a href=""><img src="黑胶.png" alt="" width="270px"></a>
+        </div>
+        <div class="zhongxing">
+            <br>
+            <div onclick="window.location.href='your-link-here.html'">
+                <a href="your-link-here.html" class="xiaoxi">
+                    &nbsp;<img src="我的消息.png" alt="" width="20px" class="xiaoxitu">&nbsp;&nbsp;
+                    我的消息
+                    <span class="fuhao">&gt;</span>
+                </a>
+            </div>
+            <br>
+            <div onclick="window.location.href='your-link-here.html'">
+                <a href=""  class="xiaoxi">
+                    &nbsp;<img src="云贝.jpg" alt="" width="20px" class="xiaoxitu">&nbsp;&nbsp;
+                    云贝中心
+                    <span class="fuhao">&gt;</span>
+                </a>
+            </div>
+            <br>
+            <div onclick="window.location.href='your-link-here.html'">
+                <a href=""  class="xiaoxi">
+                    &nbsp;<img src="徽章.jpg" alt="" width="20px" class="xiaoxitu">&nbsp;&nbsp;
+                    徽章中心
+                    <span class="fuhao">&gt;</span>
+                </a>
+            </div>
+            <br>
+            <div onclick="window.location.href='your-link-here.html'">
+                <a href=""  class="xiaoxi">
+                    &nbsp;<img src="创作者.jpg" alt="" width="20px" class="xiaoxitu">&nbsp;&nbsp;
+                    创作者中心
+                    <span class="fuhao1">&gt;</span>
+                </a>
+            </div>
+        </div>
+            
+        
+    </div>
+    <div id="sidebar" class="sidebar">
+     </div>
+    </div>
+    <main>
+        主内容...
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

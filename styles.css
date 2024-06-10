@@ -1,0 +1,40 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* 防止水平滚动 */
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%; /* 初始状态隐藏 */
+    width: 250px; /* 侧边栏宽度 */
+    height: 100%;
+    background-color :white;
+    transition: transform 0.3s ease; /* 平滑动画 */
+    z-index: 1000; /* 确保侧边栏在遮罩层之上 */
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+  background-color: rgb(21, 21, 21);
+    display: none; /* 初始状态隐藏 */
+    transition: opacity 0.3s ease; /* 平滑动画 */
+    z-index: 500;
+}
+
+main {
+    margin-left: 0;
+    transition: margin-left 0.3s ease; /* 平滑动画 */
+}
+.top-text
+{
+    color: white;
+    font-size: 10px;
+    position: relative;
+    bottom: 10px;
+}
